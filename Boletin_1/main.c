@@ -13,15 +13,15 @@ int main( int argc, char *argv[])
     reg3.valor = 8;
     reg4.valor = 12;
     reg5.valor = 16;
+
     init(hash_tabla);
-
-
 
     insert(hash_tabla, reg1);
     insert(hash_tabla, reg2);
     insert(hash_tabla, reg3);
     insert(hash_tabla, reg4);
     insert(hash_tabla, reg5);
+
     show(hash_tabla);
 
     system("PAUSE");
