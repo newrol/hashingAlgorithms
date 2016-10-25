@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1477405591 source:c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\boletín 1. hashing\boletin_1\hashing_lineal.c
+	"hashing_lineal.h"
+
+1477065401 c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\boletín 1. hashing\boletin_1\hashing_lineal.h
+
+1477406277 source:c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\boletín 1. hashing\boletin_1\main.c
+	<stdio.h>
+	<stdlib.h>
+	"hashing_lineal.h"
+
