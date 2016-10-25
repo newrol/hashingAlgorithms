@@ -12,9 +12,11 @@
 1477408962 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
 
-1477407932 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+1477409641 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+	<stdio.h>
+	<stdlib.h>
 
-1477408924 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+1477408983 source:/home/daniel/algorithmspractices/Boletin_1/main.c
 	<stdio.h>
 	<stdlib.h>
 	"hashing_lineal.h"
