@@ -1,5 +1,6 @@
 #include "hashing_lineal.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 void init(persona mitabla[]){
 
     int i;
@@ -23,16 +24,16 @@ void insert(persona mitabla[], persona reg){
     if(mitabla[p].valor != LIBRE && mitabla[p].valor != BORRADO){
 
        int i;
-       for(i=1; i< TAM; i++){
-            p2 = (p + i) % TAM;
-            if(mitabla[p2].valor == LIBRE || mitabla[p2].valor == BORRADO){
+       for(i=1; i<TAM; i++){
+            p2=(p+i) % TAM;
+            if(mitabla[p2].valor == LIBRE && mitabla[p2].valor==BORRADO){
                 mitabla[p2] = reg;
                 break;
             }
        }
 
        if(i==TAM)
-            printf("IMPOSIBLE INSERTAR VALOR %d\n", reg.valor);
+            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg.valor);
 
     }
     else
@@ -60,8 +61,8 @@ void show(persona mitable[]){
 
     int i;
 
-    for(i=0; i < TAM; i++){
-        printf("%d|", mitable[i].valor);
+    for(i=0; i<TAM; i++){
+        printf("%d|\n", mitabla[i].valor);
     }
 
     printf("\n");

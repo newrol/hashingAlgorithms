@@ -9,13 +9,25 @@
 	<stdlib.h>
 	"hashing_lineal.h"
 
+<<<<<<< HEAD
 1477911235 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+=======
+
+1477408962 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+>>>>>>> 488ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
 	"hashing_lineal.h"
 
 1477910948 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 
+<<<<<<< HEAD
 1477911105 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+=======
+1477408983 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+>>>>>>> origin/master
+	<stdio.h>
+	<stdlib.h>
+>>>>>>> 488ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
 	"hashing_lineal.h"
 
