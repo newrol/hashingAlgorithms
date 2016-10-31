@@ -24,15 +24,15 @@ void insert(persona mitabla[], persona reg){
     if(mitabla[p].valor != LIBRE && mitabla[p].valor != BORRADO){
 
        int i;
-       for(i=1; i<TAM; i++){
+       for(i=1; i < TAM; i++){
             p2=(p+i) % TAM;
-            if(mitabla[p2].valor == LIBRE && mitabla[p2].valor==BORRADO){
+            if(mitabla[p2].valor == LIBRE || mitabla[p2].valor==BORRADO){
                 mitabla[p2] = reg;
                 break;
             }
        }
 
-       if(i==TAM)
+       if(i == TAM)
             printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg.valor);
 
     }
@@ -62,7 +62,7 @@ void show(persona mitable[]){
     int i;
 
     for(i=0; i<TAM; i++){
-        printf("%d|\n", mitabla[i].valor);
+        printf("%d|", mitable[i].valor);
     }
 
     printf("\n");
