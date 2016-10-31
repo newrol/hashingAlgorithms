@@ -2,7 +2,7 @@
 
 int main( int argc, char *argv[])
 {
-    persona hash_tabla[TAM];
+    persona hash_table[TAM];
 
     persona reg1, reg2, reg3, reg4, reg5;
 
@@ -12,15 +12,40 @@ int main( int argc, char *argv[])
     reg4.valor = 12;
     reg5.valor = 16;
 
-    init(hash_tabla);
+    init(hash_table);                                                      //Iniciamos la tabla hash
 
-    insert(hash_tabla, reg1);
-    insert(hash_tabla, reg2);
-    insert(hash_tabla, reg3);
-    insert(hash_tabla, reg4);
-    insert(hash_tabla, reg5);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));        ///Mostramos el factor de carga
 
-    show(hash_tabla);
+    ///Insertamos los valores
+    insert(hash_table, reg1);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+
+    insert(hash_table, reg2);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+
+    insert(hash_table, reg3);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+
+    insert(hash_table, reg4);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+
+    insert(hash_table, reg5);
+    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+
+
+    show(hash_table);         ///Mostramos la tabla
+
+    printf(" la posicion del registro 12 --> %d \n", search(hash_table, 12));
+    printf(" la posicion del registro 16 --> %d \n", search(hash_table, 16));
+
+    delete(hash_table, 0);        ///Borramos el 0
+    show(hash_table);            ///Mostramos la tabla
+
+    printf(" la posicion del registro 12 --> %d \n", search(hash_table, 12));
+
+    insert(hash_table, reg5);     ///Insertamos el valor 16 (reg5)
+    show(hash_table);            ///Mostramos la tabla
+
 
     system("PAUSE");
     return 0;
