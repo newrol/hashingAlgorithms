@@ -17,7 +17,7 @@ void insert(persona mitabla[], persona reg){
     int p, p2;
     p = H(reg.valor);
 
-    if(mitabla[p].valor != LIBRE || mitabla[p].valor != BORRADO){
+    if(mitabla[p].valor != LIBRE && mitabla[p].valor != BORRADO){
 
        int i;
        for(i=1; i<TAM; i++){

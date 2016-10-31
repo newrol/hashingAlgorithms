@@ -9,14 +9,16 @@
 	<stdlib.h>
 	"hashing_lineal.h"
 
-1477409468 source:c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\algorithmspractices\boletin_1\hashing_lineal.c
+
+1477408962 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
+
+1477409641 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 
-1477065401 c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\algorithmspractices\boletin_1\hashing_lineal.h
-
-1477406277 source:c:\users\oleh_dj\desktop\ucam 2016-17\segundo_ii\04-alg\prácticas\algorithmspractices\boletin_1\main.c
+1477408983 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+>>>>>>> origin/master
 	<stdio.h>
 	<stdlib.h>
 	"hashing_lineal.h"

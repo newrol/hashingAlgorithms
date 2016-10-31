@@ -1,6 +1,9 @@
 #ifndef HASHING_LINEAL_H_INCLUDED
 #define HASHING_LINEAL_H_INCLUDED
 
+#include <stdio.h>
+#include <stdlib.h>
+
 #define TAM 4
 #define LIBRE -1
 #define BORRADO -2
