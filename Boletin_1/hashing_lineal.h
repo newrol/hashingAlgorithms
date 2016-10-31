@@ -4,16 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#include "model.h"
+
 #define TAM 4
 #define LIBRE -1
 #define BORRADO -2
-
-typedef struct persona {
-
-    int valor;
-    ///int dni;
-
-}persona;
 
 ///Iniciar la tabla hash. Pone todos los valores a -1
 void init(persona mitabla[]);

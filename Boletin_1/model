@@ -1,0 +1,16 @@
+#ifndef MODEL_INCLUDED
+#define MODEL_INCLUDED
+
+
+
+typedef struct persona {
+
+    int valor;
+    ///int dni;
+
+
+
+}persona;
+
+
+#endif // MODEL_INCLUDED

@@ -1,6 +1,7 @@
 #include "hashing_lineal.h"
-#include <stdio.h>
-#include <stdlib.h>
+
+
+
 void init(persona mitabla[]){
 
     int i;
