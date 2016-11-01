@@ -6,11 +6,11 @@ persona hash_table[TAM];
 
     persona reg1, reg2, reg3, reg4, reg5;
 
-    reg1.valor = 0;
-    reg2.valor = 4;
-    reg3.valor = 8;
-    reg4.valor = 12;
-    reg5.valor = 16;
+    reg1.dni = 0;
+    reg2.dni = 4;
+    reg3.dni = 8;
+    reg4.dni = 12;
+    reg5.dni = 16;
 
     init(hash_table);                                                      //Iniciamos la tabla hash
 

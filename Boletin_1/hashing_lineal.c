@@ -6,7 +6,7 @@ void init(persona mitabla[]){
 
     int i;
     for(i=0; i< TAM; i++){
-        mitabla[i].valor = LIBRE;
+        mitabla[i].dni = LIBRE;
     }
 }
 
@@ -20,26 +20,31 @@ int H(int k){
 void insert(persona mitabla[], persona reg){
 
     int p, p2;
-    p = H(reg.valor);
+    p = H(reg.dni);
 
-    if(mitabla[p].valor != LIBRE && mitabla[p].valor != BORRADO){
+    if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
 
        int i;
        for(i=1; i < TAM; i++){
+
             p2=(p+i) % TAM;
-            if(mitabla[p2].valor == LIBRE || mitabla[p2].valor==BORRADO){
+
+            if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
+
                 mitabla[p2] = reg;
                 break;
             }
        }
 
        if(i == TAM)
-            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg.valor);
+
+            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg.dni);
 
     }
-    else
-        mitabla[p] = reg;
+    else {
 
+         mitabla[p] = reg;
+    }
 }
 
 int delete(persona mitable[], int v){
@@ -49,10 +54,12 @@ int delete(persona mitable[], int v){
     p= search(mitable, v);
 
     if(p != -1){
-        mitable[p].valor = BORRADO;
+
+        mitable[p].dni = BORRADO;
         return 0;
     }
     else{
+
             return -1;
     }
 
@@ -63,7 +70,8 @@ void show(persona mitable[]){
     int i;
 
     for(i=0; i<TAM; i++){
-        printf("%d|", mitable[i].valor);
+
+        printf("%d|", mitable[i].dni);
     }
 
     printf("\n");
@@ -75,23 +83,23 @@ int search(persona mitable[], int v){
 
     p=H(v);                                         ///Funci�n hash del valor que queremos buscar
 
-    if(mitable[p].valor==LIBRE){                    ///Fin de la b�squeda, el valor no est�
+    if(mitable[p].dni == LIBRE){                    ///Fin de la b�squeda, el valor no est�
 
         return -1;
     }
 
-    else if (mitable[p].valor!=v){                  ///Si no es el valor que buscamos, hay colisi�n
+    else if (mitable[p].dni!=v){                  ///Si no es el valor que buscamos, hay colisi�n
 
         int i;
 
         for(i=1; i< TAM; i++){
             p2 = (p+i) % TAM;
 
-            if(mitable[p2].valor==v){               ///Si el valor es el mismo que el que estaba buscando, termina y devuelve p2
+            if(mitable[p2].dni ==v){               ///Si el valor es el mismo que el que estaba buscando, termina y devuelve p2
                 return p2;
             }
 
-            else if (mitable[p2].valor==LIBRE){     ///Si el valor est� libre, para de buscar
+            else if (mitable[p2].dni ==LIBRE){     ///Si el valor est� libre, para de buscar
                 return -1;
             }
         }
@@ -118,7 +126,7 @@ float performance(persona mitabla[]){
 
     for(i=0; i<TAM; i++){
 
-        if(mitabla[i].valor != LIBRE && mitabla[i].valor != BORRADO){
+        if(mitabla[i].dni != LIBRE && mitabla[i].dni != BORRADO){
             num_ocupadas++;
             }
 

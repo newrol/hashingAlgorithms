@@ -5,6 +5,7 @@
 		<Option title="Boletin_1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
+		<Option virtualFolders="ejercicio1/;ejercicio2/;ejercicio3/;tools/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Boletin_1" prefix_auto="1" extension_auto="1" />
@@ -33,10 +34,28 @@
 		</Compiler>
 		<Unit filename="hashing_lineal.c">
 			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio1/" />
 		</Unit>
-		<Unit filename="hashing_lineal.h" />
+		<Unit filename="hashing_lineal.h">
+			<Option virtualFolder="ejercicio1/" />
+		</Unit>
+		<Unit filename="hashing_lineal_controller.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio1/" />
+		</Unit>
+		<Unit filename="hashing_lineal_controller.h">
+			<Option virtualFolder="ejercicio1/" />
+		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="model.h" />
+		<Unit filename="readFile.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="tools/" />
+		</Unit>
+		<Unit filename="readFile.h">
+			<Option virtualFolder="tools/" />
 		</Unit>
 		<Extensions>
 			<code_completion />
