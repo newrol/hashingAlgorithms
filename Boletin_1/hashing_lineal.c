@@ -17,10 +17,10 @@ int H(int k){
 }
 
 
-void insert(persona mitabla[], persona reg){
+void insert(persona mitabla[], persona * reg){
 
     int p, p2;
-    p = H(reg.dni);
+    p = H(reg->dni);
 
     if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
 
@@ -31,20 +31,21 @@ void insert(persona mitabla[], persona reg){
 
             if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
 
-                mitabla[p2] = reg;
+                mitabla[p2].dni = reg->dni;
                 break;
             }
        }
 
        if(i == TAM)
 
-            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg.dni);
+            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg->dni);
 
     }
     else {
 
-         mitabla[p] = reg;
+         mitabla[p].dni = reg->dni;
     }
+
 }
 
 int delete(persona mitable[], int v){

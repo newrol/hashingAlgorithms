@@ -1,11 +1,13 @@
 #include "readFile.h"
 
 
-int readUsers(char *nombre_fichero, persona *personas){
+int readUsers(char *nombre_fichero, persona **personasValue){
 
         char linea[500]; // Para guardar la linea de cada fichero
         char *token;     // Para cada token de cada linea
-        int numeroPersonas;
+        int numeroPersonas = 0;
+
+        persona * personas = *personasValue;
 
         //Abrimos el fichero
         FILE *fp = fopen(nombre_fichero,"r");
@@ -17,28 +19,28 @@ int readUsers(char *nombre_fichero, persona *personas){
         }
 
         // Recorremos cada linea del fichero
-        while(fgets(linea,500,fp)!=NULL){
+        while(fgets(linea,500,fp) != NULL){
 
                personas = (persona *) realloc(personas, (sizeof(persona) * ++numeroPersonas));
 
-               printf("Linea leida: %s\n", linea);
-               token = strtok(linea,","); // Separamos cada linea por ","
-               while (token != NULL){
-                     printf("%s\n",token);
-                     token = strtok(NULL, ",");  // Siguiente token en la linea (si quedan)
-               }
-               system("PAUSE");     // COMENTAR PARA EJECUCION REAL
+              token = strtok(linea,","); // Separamos cada linea por ","
+
+
+
+              personas[numeroPersonas -1].dni = (int) atoi(token);
+              token = strtok(NULL, ",");
+              strcpy(personas[numeroPersonas -1].nombre,token);
+              token = strtok(NULL, ",");
+              strcpy(personas[numeroPersonas -1].eMail, token);
+
         }
+
+
+        *personasValue = personas;
         return numeroPersonas;
 
 }
 
-void deleteUsers(persona *personas, int numeroPersonas){
+void deleteFileUsers(persona * personas, int numeroPersonas){
 
-    int i;
-
-    for(i = 0; i < numeroPersonas; i++, personas++){
-
-        free(personas);
-    }
 }

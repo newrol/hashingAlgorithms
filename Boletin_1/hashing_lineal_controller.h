@@ -1,6 +1,8 @@
 #ifndef HASHING_LINEAL_CONTROLLER_H_INCLUDED
 #define HASHING_LINEAL_CONTROLLER_H_INCLUDED
 
+#include "hashing_lineal.h"
+
 void ejercicicio1();
 
 #endif // HASHING_LINEAL_CONTROLLER_H_INCLUDED

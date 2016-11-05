@@ -8,7 +8,7 @@
 
 #include "model.h"
 
-int readUsers(char *nombre_fichero, persona *personas);
-void deleteUsers(persona *personas, int numeroPersonas);
+int readUsers(char *nombre_fichero, persona ** personas);
+void deleteFileUsers(persona *personas, int numeroPersonas);
 
 #endif // READFILE_H_INCLUDED

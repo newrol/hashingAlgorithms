@@ -11,14 +11,14 @@
 
 1477910948 D
 
-1478040734 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+1478364559 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
 
 1477408983 ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
 	"hashing_lineal.h"
 	"hashing_lineal.h"
 
-1477915704 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+1478363710 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
@@ -32,6 +32,15 @@
 
 1478040303 /home/daniel/algorithmspractices/Boletin_1/model.h
 
-1478040752 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
+1478369308 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
 	"hashing_lineal.h"
+
+1478369234 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
+	"readFile.h"
+
+1478367526 /home/daniel/algorithmspractices/Boletin_1/readFile.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"model.h"
 

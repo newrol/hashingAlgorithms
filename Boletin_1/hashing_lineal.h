@@ -6,15 +6,17 @@
 
 #include "model.h"
 
-#define TAM 4
+#define TAM 100
 #define LIBRE -1
 #define BORRADO -2
+
+#define DATAFILE "data.txt"
 
 ///Iniciar la tabla hash. Pone todos los valores a -1
 void init(persona mitabla[]);
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-void insert(persona mitabla[], persona reg);
+void insert(persona mitabla[], persona * reg);
 
 
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar

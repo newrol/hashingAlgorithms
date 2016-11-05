@@ -2,48 +2,30 @@
 
 void ejercicicio1(){
 
-persona hash_table[TAM];
 
-    persona reg1, reg2, reg3, reg4, reg5;
+    printf("--------Ejericicio1---------\n\n");
 
-    reg1.dni = 0;
-    reg2.dni = 4;
-    reg3.dni = 8;
-    reg4.dni = 12;
-    reg5.dni = 16;
+    persona hash_table[TAM];
 
-    init(hash_table);                                                      //Iniciamos la tabla hash
+    persona * personas;
 
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));        ///Mostramos el factor de carga
+    int value = 0;
 
-    ///Insertamos los valores
-    insert(hash_table, reg1);
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
-
-    insert(hash_table, reg2);
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
-
-    insert(hash_table, reg3);
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
-
-    insert(hash_table, reg4);
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
-
-    insert(hash_table, reg5);
-    printf(" Factor de carga: %.2f \n" ,performance(hash_table));
+     init(hash_table);
 
 
-    show(hash_table);         ///Mostramos la tabla
+    value = readUsers(DATAFILE, &personas);
 
-    printf(" la posicion del registro 12 --> %d \n", search(hash_table, 12));
-    printf(" la posicion del registro 16 --> %d \n", search(hash_table, 16));
+    int i;
 
-    delete(hash_table, 0);        ///Borramos el 0
-    show(hash_table);            ///Mostramos la tabla
+    for(i = 0; i< value; i++){
 
-    printf(" la posicion del registro 12 --> %d \n", search(hash_table, 12));
+        insert(hash_table, &personas[i]);
 
-    insert(hash_table, reg5);     ///Insertamos el valor 16 (reg5)
+    }
+
+    free(personas);     //liberamos el especio de los usuarios leidos
+
     show(hash_table);            ///Mostramos la tabla
 
 
