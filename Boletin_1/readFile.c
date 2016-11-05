@@ -36,9 +36,9 @@ int readUsers(char *nombre_fichero, persona *personas){
 void deleteUsers(persona *personas, int numeroPersonas){
 
     int i;
-    for(i = 0; i<numeroPersonas; i++){
 
-        free(personas[i]);
+    for(i = 0; i < numeroPersonas; i++, personas++){
+
+        free(personas);
     }
-
 }
