@@ -32,6 +32,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="hashing_dependiente_clave.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio2/" />
+		</Unit>
+		<Unit filename="hashing_dependiente_clave.h">
+			<Option virtualFolder="ejercicio2/" />
+		</Unit>
+		<Unit filename="hashing_dependiente_clave_controller.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio2/" />
+		</Unit>
+		<Unit filename="hashing_dependiente_clave_controller.h">
+			<Option virtualFolder="ejercicio2/" />
+		</Unit>
 		<Unit filename="hashing_lineal.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="ejercicio1/" />

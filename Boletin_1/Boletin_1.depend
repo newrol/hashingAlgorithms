@@ -11,7 +11,7 @@
 
 1477910948 D
 
-1478364559 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+1478428684 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
 
 1477408983 ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
@@ -23,8 +23,10 @@
 	<stdlib.h>
 	"model.h"
 
-1477917626 source:/home/daniel/algorithmspractices/Boletin_1/main.c
-	"hashing_lineal.h"
+1478429137 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+	"hashing_lineal_controller.h"
+	"hashing_dependiente_clave_controller.h"
+	<stdbool.h>
 
 1477408983 gin/master
 	<stdio.h>
@@ -32,7 +34,7 @@
 
 1478040303 /home/daniel/algorithmspractices/Boletin_1/model.h
 
-1478369308 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
+1478428714 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
 	"hashing_lineal.h"
 
 1478369234 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
@@ -42,5 +44,22 @@
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
+	"model.h"
+
+1478428522 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.c
+	"hashing_dependiente_clave.h"
+
+1478428440 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.c
+	"hashing_dependiente_clave.h"
+
+1478360014 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.h
+	"hashing_lineal.h"
+
+1478428109 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.h
+	"hashing_dependiente_clave.h"
+
+1478428557 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
+	<stdio.h>
+	<stdlib.h>
 	"model.h"
 

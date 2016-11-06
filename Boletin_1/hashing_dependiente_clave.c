@@ -1,8 +1,8 @@
-#include "hashing_lineal.h"
+#include "hashing_dependiente_clave.h"
 
 
-
-void linealInit(persona mitabla[]){
+/*
+void init(persona mitabla[]){
 
     int i;
     for(i=0; i< TAM; i++){
@@ -10,17 +10,18 @@ void linealInit(persona mitabla[]){
     }
 }
 
+
 //Funcion hash
-int linealH(int k){
+int dependH(int k){
 
     return (k % TAM);
 }
 
 
-void linealInsert(persona mitabla[], persona * reg){
+void dependInsert(persona mitabla[], persona * reg){
 
     int p, p2;
-    p = linealH(reg->dni);
+    p = H(reg->dni);
 
     if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
 
@@ -48,11 +49,11 @@ void linealInsert(persona mitabla[], persona * reg){
 
 }
 
-int linealDelete(persona mitable[], int v){
+int dependDelete(persona mitable[], int v){
 
     int p;
 
-    p= linealSearch(mitable, v);
+    p= search(mitable, v);
 
     if(p != -1){
 
@@ -66,7 +67,7 @@ int linealDelete(persona mitable[], int v){
 
 }
 
-void linealShow(persona mitable[]){
+void dependShow(persona mitable[]){
 
     int i;
 
@@ -78,11 +79,11 @@ void linealShow(persona mitable[]){
     printf("\n");
 }
 
-int linealSearch(persona mitable[], int v){
+int dependSearch(persona mitable[], int v){
 
     int p, p2;
 
-    p= linealH(v);                                         ///Funci�n hash del valor que queremos buscar
+    p=H(v);                                         ///Funci�n hash del valor que queremos buscar
 
     if(mitable[p].dni == LIBRE){                    ///Fin de la b�squeda, el valor no est�
 
@@ -120,7 +121,7 @@ int linealSearch(persona mitable[], int v){
     return 0;
 }
 
-float linealPerformance(persona mitabla[]){
+float dependPerformance(persona mitabla[]){
 
     int num_ocupadas=0;
     int i;
@@ -136,3 +137,5 @@ float linealPerformance(persona mitabla[]){
     return ((float)num_ocupadas/TAM);      ///Devolvemos el factor de carga.
 }
 
+
+*/

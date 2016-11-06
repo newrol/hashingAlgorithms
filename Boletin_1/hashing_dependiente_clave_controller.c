@@ -1,8 +1,8 @@
-#include "hashing_lineal.h"
+#include "hashing_dependiente_clave.h"
 
-void ejercicio1(){
+void ejercicio2(){
 
-
+/*
     printf("--------Ejericicio1---------\n\n");
 
     persona hash_table[TAM];
@@ -11,7 +11,7 @@ void ejercicio1(){
 
     int value = 0;
 
-     linealInit(hash_table);
+     init(hash_table);
 
 
     value = readUsers(DATAFILE, &personas);
@@ -20,16 +20,16 @@ void ejercicio1(){
 
     for(i = 0; i< value; i++){
 
-        linealInsert(hash_table, &personas[i]);
+        insert(hash_table, &personas[i]);
 
     }
 
     free(personas);     //liberamos el especio de los usuarios leidos
 
-    linealShow(hash_table);            ///Mostramos la tabla
+    show(hash_table);            ///Mostramos la tabla
 
 
     system("PAUSE");
     return 0;
-
+*/
 }

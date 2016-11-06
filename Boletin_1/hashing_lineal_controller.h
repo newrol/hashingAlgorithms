@@ -3,6 +3,6 @@
 
 #include "hashing_lineal.h"
 
-void ejercicicio1();
+void ejercicio1();
 
 #endif // HASHING_LINEAL_CONTROLLER_H_INCLUDED
