@@ -9,6 +9,8 @@ int readUsers(char *nombre_fichero, persona **personasValue){
 
         persona * personas = *personasValue;
 
+        personas = malloc(sizeof(persona));     //Solve this malloc troubles
+
         //Abrimos el fichero
         FILE *fp = fopen(nombre_fichero,"r");
 
@@ -21,7 +23,7 @@ int readUsers(char *nombre_fichero, persona **personasValue){
         // Recorremos cada linea del fichero
         while(fgets(linea,500,fp) != NULL){
 
-               personas = (persona *) realloc(personas, (sizeof(persona) * ++numeroPersonas));
+              personas = (persona *) realloc(personas, (sizeof(persona) * ++numeroPersonas));
 
               token = strtok(linea,","); // Separamos cada linea por ","
 

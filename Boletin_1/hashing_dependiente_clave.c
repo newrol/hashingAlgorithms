@@ -1,13 +1,19 @@
 #include "hashing_dependiente_clave.h"
 
 
-/*
-void init(persona mitabla[]){
+
+void dependInit(persona **mitabla){
 
     int i;
+    persona * newTable;
+
+    newTable = malloc(sizeof(persona) *  TAM);
+
     for(i=0; i< TAM; i++){
-        mitabla[i].dni = LIBRE;
+        newTable[i].dni = LIBRE;
     }
+
+    *mitabla = newTable;
 }
 
 
@@ -17,18 +23,24 @@ int dependH(int k){
     return (k % TAM);
 }
 
+int dependHCollision(int k, int i){
 
-void dependInsert(persona mitabla[], persona * reg){
+    return (  (k + (dependH(k) * i)) % TAM );
+}
+
+
+void dependInsert(persona *mitabla, persona * reg){
 
     int p, p2;
-    p = H(reg->dni);
+    p = dependH(reg->dni);
+
 
     if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
 
        int i;
        for(i=1; i < TAM; i++){
 
-            p2=(p+i) % TAM;
+            p2= dependHCollision(reg->dni,i + 1);
 
             if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
 
@@ -49,11 +61,12 @@ void dependInsert(persona mitabla[], persona * reg){
 
 }
 
+/*
 int dependDelete(persona mitable[], int v){
 
     int p;
 
-    p= search(mitable, v);
+    p = search(mitable, v);
 
     if(p != -1){
 
@@ -66,7 +79,7 @@ int dependDelete(persona mitable[], int v){
     }
 
 }
-
+*/
 void dependShow(persona mitable[]){
 
     int i;
@@ -78,7 +91,7 @@ void dependShow(persona mitable[]){
 
     printf("\n");
 }
-
+/*
 int dependSearch(persona mitable[], int v){
 
     int p, p2;
@@ -120,7 +133,7 @@ int dependSearch(persona mitable[], int v){
 
     return 0;
 }
-
+*/
 float dependPerformance(persona mitabla[]){
 
     int num_ocupadas=0;
@@ -138,4 +151,3 @@ float dependPerformance(persona mitabla[]){
 }
 
 
-*/

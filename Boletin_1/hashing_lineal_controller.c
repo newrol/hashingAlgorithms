@@ -11,10 +11,11 @@ void ejercicio1(){
 
     int value = 0;
 
-     linealInit(hash_table);
+    linealInit(hash_table);
 
 
-    value = readUsers(DATAFILE, &personas);
+   value = readUsers(DATAFILE, &personas);
+
 
     int i;
 

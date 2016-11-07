@@ -18,12 +18,12 @@
 	"hashing_lineal.h"
 	"hashing_lineal.h"
 
-1478363710 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+1478532621 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
 
-1478429137 source:/home/daniel/algorithmspractices/Boletin_1/main.c
+1478532487 source:/home/daniel/algorithmspractices/Boletin_1/main.c
 	"hashing_lineal_controller.h"
 	"hashing_dependiente_clave_controller.h"
 	<stdbool.h>
@@ -34,10 +34,10 @@
 
 1478040303 /home/daniel/algorithmspractices/Boletin_1/model.h
 
-1478428714 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
+1478533137 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
 	"hashing_lineal.h"
 
-1478369234 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
+1478534661 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
 	"readFile.h"
 
 1478367526 /home/daniel/algorithmspractices/Boletin_1/readFile.h
@@ -46,19 +46,20 @@
 	<string.h>
 	"model.h"
 
-1478428522 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.c
+1478535392 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.c
 	"hashing_dependiente_clave.h"
 
-1478428440 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.c
-	"hashing_dependiente_clave.h"
+1478535375 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.c
+	"hashing_dependiente_clave_controller.h"
 
-1478360014 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.h
+1478429196 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.h
 	"hashing_lineal.h"
 
-1478428109 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.h
+1478533727 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.h
 	"hashing_dependiente_clave.h"
+	"readFile.h"
 
-1478428557 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
+1478534657 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"

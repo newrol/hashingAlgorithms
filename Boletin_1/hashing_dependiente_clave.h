@@ -13,11 +13,10 @@
 #define DATAFILE "data.txt"
 
 ///Iniciar la tabla hash. Pone todos los valores a -1
-//void init(persona mitabla[]);
+void dependInit(persona **mitabla);
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-void dependInsert(persona mitabla[], persona * reg);
-
+void dependInsert(persona * mitabla, persona * reg);
 
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar
 int dependDelete(persona mitabla[], int v);
