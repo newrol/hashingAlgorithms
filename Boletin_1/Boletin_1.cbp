@@ -5,7 +5,7 @@
 		<Option title="Boletin_1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="ejercicio1/;ejercicio2/;ejercicio3/;tools/;" />
+		<Option virtualFolders="ejercicio1\;ejercicio2\;ejercicio3\;tools\;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/Boletin_1" prefix_auto="1" extension_auto="1" />
@@ -45,6 +45,20 @@
 		</Unit>
 		<Unit filename="hashing_dependiente_clave_controller.h">
 			<Option virtualFolder="ejercicio2/" />
+		</Unit>
+		<Unit filename="hashing_encadenamiento.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio3/" />
+		</Unit>
+		<Unit filename="hashing_encadenamiento.h">
+			<Option virtualFolder="ejercicio3/" />
+		</Unit>
+		<Unit filename="hashing_encadenamiento_controller.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="ejercicio3/" />
+		</Unit>
+		<Unit filename="hashing_encadenamiento_controller.h">
+			<Option virtualFolder="ejercicio3/" />
 		</Unit>
 		<Unit filename="hashing_lineal.c">
 			<Option compilerVar="CC" />

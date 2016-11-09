@@ -11,10 +11,10 @@ void ejercicio1(){
 
     int value = 0;
 
-    linealInit(hash_table);
+    linealInit(hash_table);//3
 
 
-   value = readUsers(DATAFILE, &personas);
+   value = readUsers(DATAFILE, &personas);//3
 
 
     int i;
