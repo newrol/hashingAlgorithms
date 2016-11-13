@@ -16,7 +16,7 @@
 void init(persona mitabla[]);
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-void insert(persona mitabla[], persona * reg);
+void insert(persona mitabla[], persona * reg, int * collisionCounter);
 
 
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar

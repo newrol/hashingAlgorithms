@@ -9,7 +9,7 @@ void ejercicio2(){
 
     persona * hash_table = NULL;
     persona * personas = NULL;
-
+    int collisionCounter = 0;
     int value = 0;
     struct timeval t_ini, t_fin;
     double secs;
@@ -30,7 +30,7 @@ void ejercicio2(){
             dispersion(&hash_table, &currentTableSize);
         }
 
-        while(dependInsert(hash_table, currentTableSize, &personas[i]) != 0){
+        while(dependInsert(hash_table, currentTableSize, &personas[i], &collisionCounter) != 0){
             dispersion(&hash_table, &currentTableSize);
 
         }
@@ -40,6 +40,8 @@ void ejercicio2(){
     gettimeofday(&t_fin, NULL);
     secs = timeval_diff(&t_fin, &t_ini);
     printf("Tiempo de ejecucíon: %.16g milliseconds\n\n", secs * 1000.0);
+
+    printf("Numero de colisiones: %d\n", collisionCounter);
 
 
     free(personas);     //liberamos el especio de los usuarios leidos

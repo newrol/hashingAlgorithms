@@ -11,14 +11,14 @@
 
 1477910948 D
 
-1479033359 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+1479066360 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
 
 1477408983 ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
 	"hashing_lineal.h"
 	"hashing_lineal.h"
 
-1478980929 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+1479066328 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
@@ -36,7 +36,7 @@
 1479064394 /home/daniel/algorithmspractices/Boletin_1/model.h
 	<stdint.h>
 
-1479065605 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
+1479066428 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
 	"hashing_lineal.h"
 
 1479004718 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
@@ -69,7 +69,7 @@
 	"readFile.h"
 	"time_eval.h"
 
-1479033249 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
+1479066607 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
@@ -87,7 +87,7 @@
 	"model.h"
 	"lista_dinamica.h"
 
-1479065703 source:/home/daniel/algorithmspractices/Boletin_1/hashing_chaining_controller.c
+1479065999 source:/home/daniel/algorithmspractices/Boletin_1/hashing_chaining_controller.c
 	"hashing_chaining_controller.h"
 
 1479065718 /home/daniel/algorithmspractices/Boletin_1/hashing_chaining_controller.h

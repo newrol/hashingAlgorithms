@@ -17,7 +17,7 @@
 void dependInit(persona **mitabla, int tableSize);
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-int dependInsert(persona * mitabla,int tableSize , persona * reg);
+int dependInsert(persona * mitabla,int tableSize , persona * reg, int * collisionCounter);
 
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar
 int dependDelete(persona mitabla[],int * tableSize, int v);

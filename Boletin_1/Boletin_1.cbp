@@ -92,6 +92,13 @@
 		<Unit filename="readFile.h">
 			<Option virtualFolder="tools/" />
 		</Unit>
+		<Unit filename="time_eval.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="tools/" />
+		</Unit>
+		<Unit filename="time_eval.h">
+			<Option virtualFolder="tools/" />
+		</Unit>
 		<Extensions>
 			<code_completion />
 			<envvars />

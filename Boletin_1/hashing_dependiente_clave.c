@@ -22,7 +22,7 @@ void dispersion(persona ** table, int * tableSize){
     printf("%s %d \n", "Aplicando redispersion a la tabla de tamaño", *tableSize);
 
     int currentTablesize = *tableSize;
-
+    int collisionCounter = 0;
     int newTableSize =  *tableSize * 2;
 
     persona * inputTableBuffer = *table;
@@ -38,7 +38,7 @@ void dispersion(persona ** table, int * tableSize){
     for(i = 0; i < currentTablesize; i++){
 
 
-            dependInsert(personasBuffer, newTableSize ,&inputTableBuffer[i]);
+            dependInsert(personasBuffer, newTableSize ,&inputTableBuffer[i], &collisionCounter);
     }
 
 
@@ -63,7 +63,7 @@ int dependHCollision(int k, int tableSize, int i){
 }
 
 
-int dependInsert(persona * mitabla, int tableSize , persona * reg){
+int dependInsert(persona * mitabla, int tableSize , persona * reg, int * collisionCounter){
 
     int p, p2;
 
@@ -75,6 +75,7 @@ int dependInsert(persona * mitabla, int tableSize , persona * reg){
 
        int i;
        for(i=1; i < tableSize ; i++){
+            *collisionCounter = *collisionCounter + 1;
 
             p2= dependHCollision(reg->dni, tableSize,i + 1);
 

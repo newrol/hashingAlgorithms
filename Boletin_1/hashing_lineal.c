@@ -17,7 +17,7 @@ int linealH(int k){
 }
 
 
-void linealInsert(persona mitabla[], persona * reg){
+void linealInsert(persona mitabla[], persona * reg, int * collisionCounter){
 
     int p, p2;
     p = linealH(reg->dni);
@@ -26,6 +26,7 @@ void linealInsert(persona mitabla[], persona * reg){
 
        int i;
        for(i=1; i < TAM; i++){
+            *collisionCounter = *collisionCounter + 1;
 
             p2=(p+i) % TAM;
 

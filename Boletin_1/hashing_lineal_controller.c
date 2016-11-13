@@ -10,7 +10,7 @@ void ejercicio1(){
     struct timeval t_ini, t_fin;
     double secs;
     int value = 0;
-
+    int collisionsCounter = 0;
 
     linealInit(hash_table);//3
 
@@ -21,7 +21,7 @@ void ejercicio1(){
     int i;
     for(i = 0; i< value; i++){
 
-        linealInsert(hash_table, &personas[i]);
+        linealInsert(hash_table, &personas[i], &collisionsCounter);
 
 
     }
@@ -30,6 +30,7 @@ void ejercicio1(){
     secs = timeval_diff(&t_fin, &t_ini);
     printf("Tiempo de ejecucíon: %.16g milliseconds\n\n", secs * 1000.0);
 
+    printf("Numero de colisiones: %d\n", collisionsCounter);
 
     free(personas);     //liberamos el especio de los usuarios leidos
 
