@@ -65,7 +65,7 @@ int dependHCollision(int k, int tableSize, int i){
 }
 
 
-void dependInsert(persona * mitabla, int tableSize , persona * reg){
+int dependInsert(persona * mitabla, int tableSize , persona * reg){
 
     int p, p2;
 
@@ -87,13 +87,23 @@ void dependInsert(persona * mitabla, int tableSize , persona * reg){
             }
        }
 
+       if(i == tableSize){
+
+       printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg->dni);
+            return 1;
+
+       }
+
 
     }
 
     else {
 
          mitabla[p].dni = reg->dni;
+
     }
+
+    return 0;
 }
 
 /*

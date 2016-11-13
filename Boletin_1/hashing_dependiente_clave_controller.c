@@ -27,8 +27,10 @@ void ejercicio2(){
             dispersion(&hash_table, &currentTableSize);
         }
 
-        dependInsert(hash_table, currentTableSize, &personas[i]);
+        while(dependInsert(hash_table, currentTableSize, &personas[i]) != 0){
+            dispersion(&hash_table, &currentTableSize);
 
+        }
 
     }
 

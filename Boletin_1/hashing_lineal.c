@@ -40,11 +40,14 @@ void linealInsert(persona mitabla[], persona * reg){
 
             printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg->dni);
 
+
+
     }
     else {
 
          mitabla[p].dni = reg->dni;
     }
+
 
 }
 
