@@ -1,15 +1,15 @@
 #include "hashing_dependiente_clave.h"
 
 
-void dependInit(persona **mitabla, int tableSize){
+void dependInit(person **mitabla, int tableSize){
 
     int i;
-    persona * newTable;
+    person * newTable;
 
-    newTable = malloc(sizeof(persona) * tableSize);
+    newTable = malloc(sizeof(person) * tableSize);
 
     for(i=0; i<  tableSize; i++){
-        newTable[i].dni = LIBRE;
+        newTable[i].dni = FREE;
     }
 
     *mitabla = newTable;
@@ -17,7 +17,7 @@ void dependInit(persona **mitabla, int tableSize){
 }
 
 
-void dispersion(persona ** table, int * tableSize){
+void dispersion(person ** table, int * tableSize){
 
     printf("%s %d \n", "Aplicando redispersion a la tabla de tamaño", *tableSize);
 
@@ -25,9 +25,9 @@ void dispersion(persona ** table, int * tableSize){
     int collisionCounter = 0;
     int newTableSize =  *tableSize * 2;
 
-    persona * inputTableBuffer = *table;
+    person * inputTableBuffer = *table;
 
-    persona * personasBuffer;
+    person * personasBuffer;
 
     dependInit(&personasBuffer, newTableSize);
 
@@ -63,7 +63,7 @@ int dependHCollision(int k, int tableSize, int i){
 }
 
 
-int dependInsert(persona * mitabla, int tableSize , persona * reg, int * collisionCounter){
+int dependInsert(person * mitabla, int tableSize , person * reg, int * collisionCounter){
 
     int p, p2;
 
@@ -71,7 +71,7 @@ int dependInsert(persona * mitabla, int tableSize , persona * reg, int * collisi
     p = dependH(reg->dni,  tableSize);
 
 
-    if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
+    if(mitabla[p].dni != FREE && mitabla[p].dni != DELETED){
 
        int i;
        for(i=1; i < tableSize ; i++){
@@ -79,7 +79,7 @@ int dependInsert(persona * mitabla, int tableSize , persona * reg, int * collisi
 
             p2= dependHCollision(reg->dni, tableSize,i + 1);
 
-            if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
+            if(mitabla[p2].dni == FREE || mitabla[p2].dni == DELETED){
 
                 mitabla[p2].dni = reg->dni;
                 break;
@@ -105,16 +105,16 @@ int dependInsert(persona * mitabla, int tableSize , persona * reg, int * collisi
     return 0;
 }
 
-/*
-int dependDelete(persona mitable[], int v){
+
+int dependDelete(person * mitable, int v, int tableSize){
 
     int p;
 
-    p = search(mitable, v);
+    p = dependSearch(mitable, v, tableSize);
 
     if(p != -1){
 
-        mitable[p].dni = BORRADO;
+        mitable[p].dni = DELETED;
         return 0;
     }
     else{
@@ -123,8 +123,8 @@ int dependDelete(persona mitable[], int v){
     }
 
 }
-*/
-void dependShow(persona * mitable, int tableSize){
+
+void dependShow(person * mitable, int tableSize){
 
     int i;
 
@@ -135,14 +135,15 @@ void dependShow(persona * mitable, int tableSize){
 
     printf("\n");
 }
-/*
-int dependSearch(persona mitable[], int v){
+
+
+int dependSearch(person * mitable, int v, int tableSize){
 
     int p, p2;
+    int collisions = 0;
+    p = dependH(v, tableSize);                                         ///Funci�n hash del valor que queremos buscar
 
-    p=H(v);                                         ///Funci�n hash del valor que queremos buscar
-
-    if(mitable[p].dni == LIBRE){                    ///Fin de la b�squeda, el valor no est�
+    if(mitable[p].dni == FREE){                    ///Fin de la b�squeda, el valor no est�
 
         return -1;
     }
@@ -151,19 +152,25 @@ int dependSearch(persona mitable[], int v){
 
         int i;
 
-        for(i=1; i< TAM; i++){
-            p2 = (p+i) % TAM;
+        for(i=1; i< tableSize; i++){
+            collisions++;
+            p2 = dependHCollision(v, tableSize,i + 1);
 
             if(mitable[p2].dni ==v){               ///Si el valor es el mismo que el que estaba buscando, termina y devuelve p2
+                printf("numero de colisiones dni %d : %d\n", v, collisions);
+
                 return p2;
             }
 
-            else if (mitable[p2].dni ==LIBRE){     ///Si el valor est� libre, para de buscar
+            else if (mitable[p2].dni ==FREE){     ///Si el valor est� libre, para de buscar
+                printf("numero de colisiones dni %d : %d\n", v, collisions);
+
                 return -1;
             }
         }
 
-        if (i == TAM){                                ///Si has dado la vuelta a toda la tabla porque estaba llena y no est� el valor, devuelve un -1
+        if (i == tableSize){                                ///Si has dado la vuelta a toda la tabla porque estaba llena y no est� el valor, devuelve un -1
+            printf("numero de colisiones dni %d : %d\n", v, collisions);
 
             printf(" La tabla esta llena. \n");
             return -1;
@@ -171,21 +178,21 @@ int dependSearch(persona mitable[], int v){
     }
 
     else {                                          ///Hemos encontrado el registro, devolvemos su posici�n
-
+        printf("numero de colisiones dni %d : %d\n", v, collisions);
         return p;
     }
 
     return 0;
 }
-*/
-float dependPerformance(persona * mitabla, int tableSize){
+
+float dependPerformance(person * mitabla, int tableSize){
 
     int num_ocupadas=0;
     int i;
 
     for(i=0; i < tableSize; i++){
 
-        if(mitabla[i].dni != LIBRE && mitabla[i].dni != BORRADO){
+        if(mitabla[i].dni != FREE && mitabla[i].dni != DELETED){
             num_ocupadas++;
 
             }

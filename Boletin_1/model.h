@@ -4,16 +4,21 @@
 #include <stdint.h>
 
 
-typedef struct persona {
+/**
+*Main structure
+**/
+typedef struct person {
 
     int  dni;
-    char nombre[100];
-    char eMail[100];
+    char name[100];
+    char mail[100];
 
-}persona;
+}person;
 
 
-
+/**
+*Structures will be used to time measurent
+**/
 typedef uint8_t BYTE;
 typedef uint32_t DWORD;
 typedef int32_t LONG;

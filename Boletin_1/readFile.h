@@ -8,7 +8,7 @@
 
 #include "model.h"
 
-int readUsers(char *nombre_fichero, persona ** personas);
-void deleteFileUsers(persona *personas, int numeroPersonas);
+///Get all users from a format text file
+int readUsers(char *nombre_fichero, person ** personas);
 
 #endif // READFILE_H_INCLUDED

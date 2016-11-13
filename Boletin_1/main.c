@@ -5,7 +5,9 @@
 #include <stdbool.h>
 
 
-
+/**
+*main text interface
+**/
 int menuInterface(){
 
     int input;
@@ -26,6 +28,9 @@ int menuInterface(){
 
 
 
+/**
+*app main menu
+**/
 int menu(){
 
      switch (menuInterface()){
@@ -35,7 +40,7 @@ int menu(){
             return 0;
 
         case 2:
-            ejercicio2();
+            exercice2();
             return 0;
 
         case 3:
@@ -52,6 +57,9 @@ int menu(){
 
 
 
+/**
+*App launcher method
+**/
 int main( int argc, char *argv[])
 {
 

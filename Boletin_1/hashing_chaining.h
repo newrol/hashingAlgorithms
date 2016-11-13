@@ -17,7 +17,7 @@ void chainingInit(P_NODO_LISTA ** mitabla);
 
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-void chainingInsert(P_NODO_LISTA * mitabla, persona * reg);
+void chainingInsert(P_NODO_LISTA * mitabla, person * reg);
 /*
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar
 int dependDelete(persona mitabla[],int * tableSize, int v);

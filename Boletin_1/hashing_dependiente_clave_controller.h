@@ -10,6 +10,6 @@
 #include "readFile.h"
 #include "time_eval.h"
 
-void ejercicio2();
+void exercice2();
 
 #endif // HASHING_DEPENDIENTE_CLAVE_CONTROLLER_H_INCLUDED

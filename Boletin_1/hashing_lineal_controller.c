@@ -5,8 +5,8 @@ void ejercicio1(){
 
     printf("--------Ejericicio1---------\n\n");
 
-    persona hash_table[TAM];
-    persona * personas = NULL;
+    person hash_table[SIZE];
+    person * personas = NULL;
     struct timeval t_ini, t_fin;
     double secs;
     int value = 0;
@@ -37,6 +37,9 @@ void ejercicio1(){
     printf("Solucion:\n\n");
     linealShow(hash_table);            ///Mostramos la tabla
 
+    linealSearch(hash_table, 10637290);
+    linealSearch(hash_table, 21039483);
+    linealSearch(hash_table, 89170831);
 
 
     system("PAUSE");

@@ -8,27 +8,27 @@
 
 #define DEPENDTABLETAM 32
 #define DISPERSIONSIZE 0,50
-#define LIBRE -1
-#define BORRADO -2
+#define FREE -1
+#define DELETED -2
 
 #define DATAFILE "data.txt"
 
 ///Iniciar la tabla hash. Pone todos los valores a -1
-void dependInit(persona **mitabla, int tableSize);
+void dependInit(person **mitabla, int tableSize);
 
 ///Insertar. Pasar la tabla que quiero insertar y un registro persona
-int dependInsert(persona * mitabla,int tableSize , persona * reg, int * collisionCounter);
+int dependInsert(person * mitabla,int tableSize , person * reg, int * collisionCounter);
 
 ///Eliminar. Pasamos la tabla y el valor que queremos eliminar
-int dependDelete(persona mitabla[],int * tableSize, int v);
+int dependDelete(person * mitabla,int tableSize, int v);
 
 ///Mostrar lo que tiene la tabla hash. Le vamos a pasar la tabla hash y muestra su contenido
-void dependShow(persona * mitabla, int tableSize);
+void dependShow(person * mitabla, int tableSize);
 
 
-int depenSsearch(persona mitabla[],int tableSize, int v);
+int depenSsearch(person mitabla[],int tableSize, int v);
 
 ///Factor de carga. N�mero de celdas ocupadas/n�mero total de celdas
-float dependPerformance(persona * mitabla, int tableSize);
+float dependPerformance(person * mitabla, int tableSize);
 
 #endif // HASHING_DEPENDIENTE_CLAVE_H_INCLUDED

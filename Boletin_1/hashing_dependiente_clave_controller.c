@@ -1,14 +1,14 @@
 #include "hashing_dependiente_clave_controller.h"
 
-void ejercicio2(){
+void exercice2(){
 
 
     printf("--------Ejericicio2---------\n\n");
 
     int currentTableSize = DEPENDTABLETAM;
 
-    persona * hash_table = NULL;
-    persona * personas = NULL;
+    person * hash_table = NULL;
+    person * people = NULL;
     int collisionCounter = 0;
     int value = 0;
     struct timeval t_ini, t_fin;
@@ -16,7 +16,7 @@ void ejercicio2(){
 
     dependInit(&hash_table, currentTableSize);
 
-    value = readUsers(DATAFILE, &personas);
+    value = readUsers(DATAFILE, &people);
 
     int i;
 
@@ -30,7 +30,7 @@ void ejercicio2(){
             dispersion(&hash_table, &currentTableSize);
         }
 
-        while(dependInsert(hash_table, currentTableSize, &personas[i], &collisionCounter) != 0){
+        while(dependInsert(hash_table, currentTableSize, &people[i], &collisionCounter) != 0){
             dispersion(&hash_table, &currentTableSize);
 
         }
@@ -44,12 +44,16 @@ void ejercicio2(){
     printf("Numero de colisiones: %d\n", collisionCounter);
 
 
-    free(personas);     //liberamos el especio de los usuarios leidos
+    free(people);     //liberamos el especio de los usuarios leidos
     free(hash_table);
 
 
     printf("Solucion:\n\n");
     dependShow(hash_table, currentTableSize);            ///Mostramos la tabla
+
+    linealSearch(hash_table, 10637290, currentTableSize);
+    linealSearch(hash_table, 21039483, currentTableSize);
+    linealSearch(hash_table, 89170831, currentTableSize);
 
 
     system("PAUSE");

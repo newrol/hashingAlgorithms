@@ -2,42 +2,42 @@
 
 
 
-void linealInit(persona mitabla[]){
+void linealInit(person myTable[]){
 
     int i;
-    for(i=0; i< TAM; i++){
-        mitabla[i].dni = LIBRE;
+    for(i=0; i< SIZE; i++){
+        myTable[i].dni = FREE;
     }
 }
 
 //Funcion hash
 int linealH(int k){
 
-    return (k % TAM);
+    return (k % SIZE);
 }
 
 
-void linealInsert(persona mitabla[], persona * reg, int * collisionCounter){
+void linealInsert(person myTable[], person * reg, int * collisionCounter){
 
     int p, p2;
     p = linealH(reg->dni);
 
-    if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
+    if(myTable[p].dni != FREE && myTable[p].dni != DELETED){
 
        int i;
-       for(i=1; i < TAM; i++){
+       for(i=1; i < SIZE; i++){
             *collisionCounter = *collisionCounter + 1;
 
-            p2=(p+i) % TAM;
+            p2=(p+i) % SIZE;
 
-            if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
+            if(myTable[p2].dni == FREE || myTable[p2].dni == DELETED){
 
-                mitabla[p2].dni = reg->dni;
+                myTable[p2].dni = reg->dni;
                 break;
             }
        }
 
-       if(i == TAM)
+       if(i == SIZE)
 
             printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg->dni);
 
@@ -46,21 +46,21 @@ void linealInsert(persona mitabla[], persona * reg, int * collisionCounter){
     }
     else {
 
-         mitabla[p].dni = reg->dni;
+         myTable[p].dni = reg->dni;
     }
 
 
 }
 
-int linealDelete(persona mitable[], int v){
+int linealDelete(person myTable[], int v){
 
     int p;
 
-    p= linealSearch(mitable, v);
+    p= linealSearch(myTable, v);
 
     if(p != -1){
 
-        mitable[p].dni = BORRADO;
+        myTable[p].dni = DELETED;
         return 0;
     }
     else{
@@ -70,54 +70,58 @@ int linealDelete(persona mitable[], int v){
 
 }
 
-void linealShow(persona mitable[]){
+void linealShow(person myTable[]){
 
     int i;
 
-    for(i=0; i<TAM; i++){
+    for(i=0; i<SIZE; i++){
 
-        printf("%d|", mitable[i].dni);
+        printf("%d|", myTable[i].dni);
     }
 
     printf("\n");
 }
 
-int linealSearch(persona mitable[], int v){
-
+int linealSearch(person myTable[], int v){
+    int collisions = 0;
     int p, p2;
 
     p= linealH(v);                                         ///Funci�n hash del valor que queremos buscar
 
-    if(mitable[p].dni == LIBRE){                    ///Fin de la b�squeda, el valor no est�
-
+    if(myTable[p].dni == FREE){                    ///Fin de la b�squeda, el valor no est�
+         printf("numero de colisiones dni %d : %d\n", v, collisions);
         return -1;
     }
 
-    else if (mitable[p].dni!=v){                  ///Si no es el valor que buscamos, hay colisi�n
+    else if (myTable[p].dni!=v){                  ///Si no es el valor que buscamos, hay colisi�n
 
         int i;
 
-        for(i=1; i< TAM; i++){
-            p2 = (p+i) % TAM;
+        for(i=1; i< SIZE; i++){
+            collisions++;
+            p2 = (p+i) % SIZE;
 
-            if(mitable[p2].dni ==v){               ///Si el valor es el mismo que el que estaba buscando, termina y devuelve p2
-                return p2;
+            if(myTable[p2].dni ==v){
+                printf("numero de colisiones dni %d : %d\n", v, collisions);
+
+                return p2;                      ///Si el valor es el mismo que el que estaba buscando, termina y devuelve p2
             }
 
-            else if (mitable[p2].dni ==LIBRE){     ///Si el valor est� libre, para de buscar
+            else if (myTable[p2].dni ==FREE){     ///Si el valor est� libre, para de buscar
+                printf("numero de colisiones dni %d : %d\n", v, collisions);
                 return -1;
             }
         }
 
-        if (i == TAM){                                ///Si has dado la vuelta a toda la tabla porque estaba llena y no est� el valor, devuelve un -1
-
+        if (i == SIZE){                                ///Si has dado la vuelta a toda la tabla porque estaba llena y no est� el valor, devuelve un -1
+             printf("numero de colisiones dni %d : %d\n", v, collisions);
             printf(" La tabla esta llena. \n");
             return -1;
         }
     }
 
     else {                                          ///Hemos encontrado el registro, devolvemos su posici�n
-
+         printf("numero de colisiones dni %d : %d\n", v, collisions);
         return p;
     }
 
@@ -126,20 +130,20 @@ int linealSearch(persona mitable[], int v){
 
 
 
-float linealPerformance(persona mitabla[]){
+float linealPerformance(person myTable[]){
     float value;
     int num_ocupadas = 0;
     int i;
 
-    for(i=0; i < TAM; i++){
+    for(i=0; i < SIZE; i++){
 
-        if(mitabla[i].dni != LIBRE && mitabla[i].dni != BORRADO){
+        if(myTable[i].dni != FREE && myTable[i].dni != DELETED){
             num_ocupadas++;
 
             }
 
     }
 
-    return (float) num_ocupadas/  TAM;     ///Devolvemos el factor de carga.
+    return (float) num_ocupadas/  SIZE;     ///Devolvemos el factor de carga.
 }
 

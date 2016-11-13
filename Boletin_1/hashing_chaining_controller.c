@@ -6,7 +6,7 @@ void exercice3(){
 
     P_NODO_LISTA * hash_table;
 
-    persona * personas = NULL;
+    person * personas = NULL;
 
     struct timeval t_ini, t_fin;
     double secs;
@@ -52,6 +52,7 @@ void exercice3(){
 
     system("PAUSE");
     return 0;
+
 
 
 }

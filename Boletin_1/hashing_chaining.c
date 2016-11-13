@@ -24,7 +24,7 @@ int chainingH(int k){
 }
 
 
-void chainingInsert(P_NODO_LISTA * table, persona * reg){
+void chainingInsert(P_NODO_LISTA * table, person * reg){
 
     int p, p2;
     p = chainingH(reg->dni);
@@ -46,15 +46,15 @@ void chainingShow(P_NODO_LISTA * mitable){
             printf("%d|-->" ,i);
 
             NODO_LISTA * nodo_lista;
-            persona * persona;
+            person * person;
 
             nodo_lista = mitable[i];
 
 
             do{
 
-            persona = (uintptr_t) nodo_lista->valor;
-            printf("%d|", persona->dni);
+            person = (uintptr_t) nodo_lista->valor;
+            printf("%d|", person->dni);
 
 
             if(nodo_lista->siguiente != NULL){
@@ -74,3 +74,5 @@ void chainingShow(P_NODO_LISTA * mitable){
 
     printf("\n");
 }
+
+
