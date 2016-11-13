@@ -6,8 +6,6 @@ void dependInit(persona **mitabla, int tableSize){
     int i;
     persona * newTable;
 
-    persona * asdf = mitabla[0];
-
     newTable = malloc(sizeof(persona) * tableSize);
 
     for(i=0; i<  tableSize; i++){

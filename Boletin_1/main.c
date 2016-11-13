@@ -1,5 +1,6 @@
 #include "hashing_lineal_controller.h"
 #include "hashing_dependiente_clave_controller.h"
+#include "hashing_chaining_controller.h"
 
 #include <stdbool.h>
 
@@ -36,11 +37,11 @@ int menu(){
         case 2:
             ejercicio2();
             return 0;
-        /*
+
         case 3:
-            ejercicio3();
+            exercice3();
             return 0;
-        */
+
 
         default:
             exit(0);
