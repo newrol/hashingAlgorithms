@@ -120,19 +120,22 @@ int linealSearch(persona mitable[], int v){
     return 0;
 }
 
-float linealPerformance(persona mitabla[]){
 
-    int num_ocupadas=0;
+
+float linealPerformance(persona mitabla[]){
+    float value;
+    int num_ocupadas = 0;
     int i;
 
-    for(i=0; i<TAM; i++){
+    for(i=0; i < TAM; i++){
 
         if(mitabla[i].dni != LIBRE && mitabla[i].dni != BORRADO){
             num_ocupadas++;
+
             }
 
     }
 
-    return ((float)num_ocupadas/TAM);      ///Devolvemos el factor de carga.
+    return (float) num_ocupadas/  TAM;     ///Devolvemos el factor de carga.
 }
 

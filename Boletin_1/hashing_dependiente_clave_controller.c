@@ -2,15 +2,17 @@
 
 void ejercicio2(){
 
+
     printf("--------Ejericicio2---------\n\n");
 
-    persona * hash_table;
+    int currentTableSize = DEPENDTABLETAM;
 
-    persona * personas;
+    persona * hash_table = NULL;
+    persona * personas = NULL;
 
     int value = 0;
 
-    dependInit(&hash_table);
+    dependInit(&hash_table, currentTableSize);
 
     value = readUsers(DATAFILE, &personas);
 
@@ -18,13 +20,24 @@ void ejercicio2(){
 
     for(i = 0; i< value; i++){
 
-        dependInsert(hash_table, &personas[i]);
+
+        int currentPerformance =  (int) (dependPerformance(hash_table, currentTableSize) * 100);
+
+        if(currentPerformance >= 50 ){
+            dispersion(&hash_table, &currentTableSize);
+        }
+
+        dependInsert(hash_table, currentTableSize, &personas[i]);
+
 
     }
 
     free(personas);     //liberamos el especio de los usuarios leidos
+    free(hash_table);
 
-    dependShow(hash_table);            ///Mostramos la tabla
+
+    printf("Solucion:\n\n");
+    dependShow(hash_table, currentTableSize);            ///Mostramos la tabla
 
 
     system("PAUSE");

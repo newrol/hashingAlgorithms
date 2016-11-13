@@ -9,7 +9,7 @@ int readUsers(char *nombre_fichero, persona **personasValue){
 
         persona * personas = *personasValue;
 
-        personas = malloc(sizeof(persona));     //Solve this malloc troubles
+       // personas = malloc(sizeof(persona));     //Solve this malloc troubles
 
         //Abrimos el fichero
         FILE *fp = fopen(nombre_fichero,"r");

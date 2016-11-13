@@ -1,46 +1,84 @@
 #include "hashing_dependiente_clave.h"
 
 
-
-void dependInit(persona **mitabla){
+void dependInit(persona **mitabla, int tableSize){
 
     int i;
     persona * newTable;
 
-    newTable = malloc(sizeof(persona) *  TAM);
+    persona * asdf = mitabla[0];
 
-    for(i=0; i< TAM; i++){
+    newTable = malloc(sizeof(persona) * tableSize);
+
+    for(i=0; i<  tableSize; i++){
         newTable[i].dni = LIBRE;
     }
 
     *mitabla = newTable;
+
 }
 
+
+void dispersion(persona ** table, int * tableSize){
+
+    printf("%s %d \n", "Aplicando redispersion a la tabla de tamaño", *tableSize);
+
+    int currentTablesize = *tableSize;
+
+    int newTableSize =  *tableSize * 2;
+
+    persona * inputTableBuffer = *table;
+
+    persona * personasBuffer;
+
+    dependInit(&personasBuffer, newTableSize);
+
+
+
+    int i;
+
+    for(i = 0; i < currentTablesize; i++){
+
+
+            dependInsert(personasBuffer, newTableSize ,&inputTableBuffer[i]);
+    }
+
+
+    *tableSize = newTableSize;
+    *table = personasBuffer;
+
+    free(inputTableBuffer);
+
+    printf("%s %d \n", "Tabla redispersionada con tamaño", newTableSize);
+
+}
 
 //Funcion hash
-int dependH(int k){
+int dependH(int k, int tableSize){
 
-    return (k % TAM);
+    return (k % tableSize);
 }
 
-int dependHCollision(int k, int i){
+int dependHCollision(int k, int tableSize, int i){
 
-    return (  (k + (dependH(k) * i)) % TAM );
+    return (  (k + (dependH(k, tableSize) * i)) % tableSize );
 }
 
 
-void dependInsert(persona *mitabla, persona * reg){
+void dependInsert(persona * mitabla, int tableSize , persona * reg){
 
     int p, p2;
-    p = dependH(reg->dni);
+
+
+    p = dependH(reg->dni,  tableSize);
 
 
     if(mitabla[p].dni != LIBRE && mitabla[p].dni != BORRADO){
 
        int i;
-       for(i=1; i < TAM; i++){
+       for(i=1; i < tableSize ; i++){
 
-            p2= dependHCollision(reg->dni,i + 1);
+            p2= dependHCollision(reg->dni, tableSize,i + 1);
 
             if(mitabla[p2].dni == LIBRE || mitabla[p2].dni == BORRADO){
 
@@ -49,16 +87,13 @@ void dependInsert(persona *mitabla, persona * reg){
             }
        }
 
-       if(i == TAM)
-
-            printf("\nIMPOSIBLE INSERTAR VALOR %d\n\n", reg->dni);
 
     }
+
     else {
 
          mitabla[p].dni = reg->dni;
     }
-
 }
 
 /*
@@ -80,11 +115,11 @@ int dependDelete(persona mitable[], int v){
 
 }
 */
-void dependShow(persona mitable[]){
+void dependShow(persona * mitable, int tableSize){
 
     int i;
 
-    for(i=0; i<TAM; i++){
+    for(i=0; i<tableSize; i++){
 
         printf("%d|", mitable[i].dni);
     }
@@ -134,20 +169,21 @@ int dependSearch(persona mitable[], int v){
     return 0;
 }
 */
-float dependPerformance(persona mitabla[]){
+float dependPerformance(persona * mitabla, int tableSize){
 
     int num_ocupadas=0;
     int i;
 
-    for(i=0; i<TAM; i++){
+    for(i=0; i < tableSize; i++){
 
         if(mitabla[i].dni != LIBRE && mitabla[i].dni != BORRADO){
             num_ocupadas++;
+
             }
 
     }
 
-    return ((float)num_ocupadas/TAM);      ///Devolvemos el factor de carga.
+    return (float) num_ocupadas/tableSize;      ///Devolvemos el factor de carga.
 }
 
 

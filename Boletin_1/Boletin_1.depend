@@ -11,14 +11,14 @@
 
 1477910948 D
 
-1478428684 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
+1478980961 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal.c
 	"hashing_lineal.h"
 
 1477408983 ecc4f6ff7e14ed6f6b3cf6e4d8c05b59675f5
 	"hashing_lineal.h"
 	"hashing_lineal.h"
 
-1478532621 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
+1478980929 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
@@ -34,10 +34,10 @@
 
 1478040303 /home/daniel/algorithmspractices/Boletin_1/model.h
 
-1478533137 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
+1479004780 source:/home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.c
 	"hashing_lineal.h"
 
-1478534661 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
+1479004718 source:/home/daniel/algorithmspractices/Boletin_1/readFile.c
 	"readFile.h"
 
 1478367526 /home/daniel/algorithmspractices/Boletin_1/readFile.h
@@ -46,10 +46,10 @@
 	<string.h>
 	"model.h"
 
-1478535392 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.c
+1479005390 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.c
 	"hashing_dependiente_clave.h"
 
-1478535375 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.c
+1479004619 source:/home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave_controller.c
 	"hashing_dependiente_clave_controller.h"
 
 1478429196 /home/daniel/algorithmspractices/Boletin_1/hashing_lineal_controller.h
@@ -59,8 +59,12 @@
 	"hashing_dependiente_clave.h"
 	"readFile.h"
 
-1478534657 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
+1479004037 /home/daniel/algorithmspractices/Boletin_1/hashing_dependiente_clave.h
 	<stdio.h>
 	<stdlib.h>
 	"model.h"
+
+1478720369 source:/home/daniel/algorithmspractices/Boletin_1/hashing_encadenamiento.c
+
+1478720369 source:/home/daniel/algorithmspractices/Boletin_1/hashing_encadenamiento_controller.c
 

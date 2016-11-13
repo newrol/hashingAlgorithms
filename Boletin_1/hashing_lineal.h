@@ -29,7 +29,7 @@ void show(persona mitabla[]);
 int search(persona mitabla[], int v);
 
 ///Factor de carga. N�mero de celdas ocupadas/n�mero total de celdas
-float performance(persona mitabla[]);
+float linealPerformance(persona mitabla[]);
 
 
 #endif // HASHING_LINEAL_H_INCLUDED
