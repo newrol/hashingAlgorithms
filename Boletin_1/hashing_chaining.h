@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 #include "model.h"
-#include "lista_dinamica.h"
+#include "lista_dinamica.h"s
 
 #define CHAININGSIZE 10
 

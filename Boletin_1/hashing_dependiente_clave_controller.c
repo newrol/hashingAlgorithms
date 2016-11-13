@@ -11,6 +11,8 @@ void ejercicio2(){
     persona * personas = NULL;
 
     int value = 0;
+    struct timeval t_ini, t_fin;
+    double secs;
 
     dependInit(&hash_table, currentTableSize);
 
@@ -18,6 +20,7 @@ void ejercicio2(){
 
     int i;
 
+    gettimeofday(&t_ini, NULL);
     for(i = 0; i< value; i++){
 
 
@@ -33,6 +36,11 @@ void ejercicio2(){
         }
 
     }
+
+    gettimeofday(&t_fin, NULL);
+    secs = timeval_diff(&t_fin, &t_ini);
+    printf("Tiempo de ejecucíon: %.16g milliseconds\n\n", secs * 1000.0);
+
 
     free(personas);     //liberamos el especio de los usuarios leidos
     free(hash_table);
